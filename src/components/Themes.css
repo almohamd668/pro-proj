@@ -1,0 +1,63 @@
+.style_switcher {
+    position: fixed;
+    left: 0;
+    top: 20%;
+    background-color: var(--container-color);
+    width: 0px;
+    
+    z-index: 10;
+    transition: all .3s ease;
+}
+
+
+.theme_toggler {
+    border-radius: 0 5px 5px 0;
+    z-index:  100;
+    opacity: 1;
+    width: 300px;
+}
+
+
+
+
+.theme_toggler,
+.style_switcher-close {
+    color: hsl(0, 0%, 40%)
+}
+.style_switcher-title {
+    font-size: var(--small-font-size);
+    font-weight: var(--wight-600);
+    border-bottom: 1px solid hsl(0, 0%, 87%);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+.theme_img {
+    width: 30px;
+    cursor: pointer;
+}
+
+.style_switcher-toggler,
+.theme_toggler {
+    position: absolute;
+    left: 100%;
+    background-color: var(--text-white);
+    height: 45px ;
+    width: 40px;
+    font-size: var(-large-font-size);
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 0 2px hsl(0, 0%, 80%) inset;
+    transition: all .3s ease;
+}
+.show-switcher .style_switcher-toggler,
+.show-switcher .theme_toggler {
+    left: -100%;
+}
+.style_switcher-toggler {
+    top: 10%;
+}
+
+.theme_toggler {
+    bottom: 10%;
+}
