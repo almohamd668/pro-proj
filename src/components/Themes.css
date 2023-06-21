@@ -1,4 +1,4 @@
-.style_switcher {
+/* .style_switcher {
     position: fixed;
     left: 0;
     top: 20%;
@@ -7,9 +7,9 @@
     
     z-index: 10;
     transition: all .3s ease;
-}
+} */
 
-/* 
+
 .theme_toggler {
     border-radius: 0 5px 5px 0;
     z-index:  100;
@@ -60,4 +60,4 @@
 
 .theme_toggler {
     bottom: 10%;
-} */
+}
