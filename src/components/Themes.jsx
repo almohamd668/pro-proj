@@ -17,11 +17,6 @@ const getStorageTheme = () => {
 const Themes = () => { 
 
 
-
-
-
- 
-
   const [theme, setTheme] = useState(getStorageTheme());
 
 
@@ -40,18 +35,20 @@ const Themes = () => {
 
 
   return (
-    <>
-      <div>
-        <div className="style_switcher">
-         
+    
+    <div>
+    <div className="style_switcher">
+     
 
-          <div className="theme_toggler" onClick={toggleTheme}>
-           {theme === 'light-theme' ? <BsMoon/>  : <BsSun/>}
-          </div>
-
-        </div>
+      <div className="theme_toggler" onClick={toggleTheme}>
+       {theme === 'light-theme' ? <BsMoon/>  : <BsSun/>}
       </div>
-    </>
+
+    </div>
+  </div>
+    
+
+    
   )
 }
 
