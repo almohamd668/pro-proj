@@ -19,20 +19,14 @@ const Themes = () => {
 
   const [theme, setTheme] = useState(getStorageTheme());
 
-
-
-    
  const toggleTheme = () => {
   theme === 'light-theme' ? setTheme('dark-theme') : setTheme('light-theme');
 }
 
-
- 
           useEffect(() => {
             document.documentElement.className = theme;
             localStorage.setItem('theme', theme);
           }, [theme]);
-
 
   return (
     
@@ -46,8 +40,6 @@ const Themes = () => {
 
     </div>
   </div>
-    
-
     
   )
 }

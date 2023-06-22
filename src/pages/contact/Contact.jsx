@@ -13,11 +13,16 @@ import { useRef } from "react";
 
 const Contact = () => {
   const form = useRef();
+  const inp1 = useRef();
+  const inp2 = useRef();
+  const inp3 = useRef();
+  const inp4 = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
-
-    emailjs
+    
+   if (  inp1.current.value !== "" & inp2.current.value !== ""&
+   inp3.current.value !== "") {emailjs
       .sendForm(
         "service_krwi48f",
         "template_cp3rx08",
@@ -27,12 +32,19 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
-          
+          inp1.current.value = "";
+          inp2.current.value = "";
+          inp3.current.value = "";
+          inp4.current.value = "";
         },
         (error) => {
           console.log(error.text);
+          inp1.current.value = ""; inp2.current.value = "";
+          inp3.current.value = "";
+          inp4.current.value = "";
+
         }
-      );
+      );}
   };
 
   return (
@@ -65,7 +77,7 @@ const Contact = () => {
                 <FaPhoneSquareAlt className="info_icon" />
                 <div>
                   <span className="info_title">Call me</span>
-                  <h4 className="info_desc">+963 0940-373-898</h4>
+                  <h4 className="info_desc">+963 940-373-898</h4>
                 </div>
               </div>
             </div>
@@ -103,6 +115,7 @@ const Contact = () => {
             <div className="form_input-group">
               <div className="form_input-div">
                 <input
+                 ref={inp1}
                   type="text"
                   placeholder="Your Name"
                   className="form_control"
@@ -114,6 +127,7 @@ const Contact = () => {
 
               <div className="form_input-div">
                 <input
+                  ref={inp2}
                   type="email"
                   placeholder="Your Email"
                   className="form_control"
@@ -123,6 +137,7 @@ const Contact = () => {
 
               <div className="form_input-div">
                 <input
+                ref={inp3}
                   type="text"
                   placeholder="Your subject"
                   className="form_control"
@@ -132,6 +147,7 @@ const Contact = () => {
             </div>
             <div className="form_input-div">
               <textarea
+              ref={inp4}
                 placeholder="Your Message"
                 className="form_control textarea"
                 name="message"

@@ -1,19 +1,20 @@
-import {useState} from 'react'
+import {useState} from 'react';
 import Close from '../assets/icons8-close-32.png';
 
-import parse from 'html-react-parser'
+import parse from 'html-react-parser';
 
 
 const Portfolio = ({ img, title, details }) => {
-     const [modal,setModal] = useState(false);
+
+  const [modal,setModal] = useState(false);
   
   const toggleModal = () => { 
     setModal(!modal);
   }
      return (
     <>
-      <div className="portfolio_item">
-        <img src={img} alt="" className="portfolio_img" />
+      <div className="portfolio_item">  
+      <img src={img} alt="" className="portfolio_img" />
 
         <div className="portfolio_hover" onClick={toggleModal}>
           <h3 className="portfolio_title">{title}</h3>
@@ -27,9 +28,11 @@ const Portfolio = ({ img, title, details }) => {
             <h3 className='modal_title'>{title}</h3>
 
               <ul className="modal_list grid">
-            {details.map(({icon, title, desc},idx) => {
+
+            {
+              details.map(({icon, title, desc},id) => {
                 return (
-                    <li className="modal_item" key={idx}>
+                    <li className="modal_item" key={id}>
                         <span className="item_icon">{icon}</span>
                   
                      <div>
@@ -41,10 +44,12 @@ const Portfolio = ({ img, title, details }) => {
             })}
               </ul>
 
-              <img src={img} alt="" className="modal_img" />
+              <img src={img} alt="" className="modal_img" /> 
           </div>
         </div>
         )}
+
+
       </div>
     </>
   );
