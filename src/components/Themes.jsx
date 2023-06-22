@@ -1,6 +1,6 @@
 
 import { BsSun, BsMoon} from 'react-icons/bs' ; 
-// import './themes.css';
+import './themes.css';
 import {useEffect, useState} from 'react';
 
 

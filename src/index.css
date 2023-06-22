@@ -88,9 +88,9 @@
     padding-right: 0;
   }
  
-  .section {
+  /* .section {
     padding-block: 50px;
-  }
+  } */
   .section_title {
     margin-bottom: 40px;
   }
@@ -233,9 +233,9 @@
   .home_title {
     font-size: var(--h1-font-size);
   }
-  .home_desc {
+  /* .home_desc {
     text-align: justify;
-  }
+  } */
   .info_title {
     display: block;
     margin-bottom: 4px;

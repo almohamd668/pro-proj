@@ -220,14 +220,14 @@ img {
 .button_icon {
   background-color: var(--first-color);
   position: absolute;
-  inset-block: -2px;
+  inset-block: -3px;
   right: 0;
-  width: 55px ;
+  width: 49px;
   border-radius: 50%;
   color: var(--text-white);
   font-size: var(--large-font-size);
   text-align: center;
-  line-height: 60px ;
+  line-height: 54px;
 }
 
 .button-flex {
