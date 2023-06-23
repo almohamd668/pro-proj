@@ -221,7 +221,18 @@
   }
 }
 @media  screen and (max-width:450px) {
-  
+   .button_icon {
+    background-color: var(--first-color);
+    position: absolute;
+    inset-block: -3px;
+    right: 0;
+    width: 49px;
+    border-radius: 50%;
+    color: var(--text-white);
+    font-size: var(--large-font-size);
+    text-align: center;
+    line-height: 56px;
+   }
   .home_img {
     display: none;
   }
